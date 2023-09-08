@@ -1,9 +1,10 @@
 /*Javascript color pick functions*/
 
-const slider = (color) => {
-    var R = colorValueInHex("red")
-    var G = colorValueInHex("green")
-    var B = colorValueInHex("blue")
+// -------------------------------------
+function slider(color) {
+    var R = colorValue("red")
+    var G = colorValue("green")
+    var B = colorValue("blue")
     var hex = R + G + B
     hex = hex.toUpperCase()
 
@@ -15,4 +16,22 @@ const slider = (color) => {
     context.fillStyle = "#" + hex
     context.fillRect(0, 0, 100, 100)
 }
-const colorValueInHex = (color) => {}
+
+// -------------------------------------
+function colorValue(color) {
+    let element = document.getElementById(color)
+    let value = Number(element.value)
+    if (value < 0) {
+        value = 0
+    }
+    element.value = "0"
+    if (value > 255) {
+        value = 255
+        element.value = "255"
+    }
+    value = value.toString(16)
+    if (value.length < 2) {
+        value = "0" + value
+    }
+    return value
+}

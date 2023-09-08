@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>DOM Changes</title>
+        <link href="css/style.css" rel="stylesheet" />
+        <script>
+            function setBodyAttribute(attr, value) {
+                if (document.body) {
+                    document.body.style[attr] = value
+                } else {
+                    notSupported()
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin: 0.5in; height: 400px">
+            <p>
+                <b><tt>text</tt> </b>
+            </p>
+            <form>
+                <select onchange="setBodyAttribute('background', this.value);">
+                    <option value="black">black</option>
+                    <option value="blue">blue</option>
+                </select>
+            </form>
+        </div>
+    </body>
+</html>
