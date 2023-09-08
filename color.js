@@ -19,7 +19,6 @@ function slider() {
 }
 
 // -------------------------------------
-
 function colorValue(color) {
     let element = document.getElementById(color)
     let value = Number(element.value)
