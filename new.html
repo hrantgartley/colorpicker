@@ -26,6 +26,34 @@
                     <option value="blue">blue</option>
                 </select>
             </form>
+            <p>
+                <b><tt>BG Color</tt> </b>
+            </p>
+            <form>
+                <select onchange="setBodyAttribute('bgcolor', this.value);">
+                    <option value="white">white</option>
+                    <option value="lightgray">light gray</option>
+                </select>
+            </form>
+            <p>
+                <b><tt>Link</tt> </b>
+            </p>
+            <form>
+                <select onchange="setBodyAttribute('bgcolor', this.value);">
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                </select>
+                <small>
+                    <a href="https://www.una.edu">UNA sample link</a>
+                </small>
+            </form>
+            <form action="">
+                <input
+                    type="button"
+                    name="Version"
+                    onclick="alert(navigator.userAgent)"
+                />
+            </form>
         </div>
     </body>
 </html>
